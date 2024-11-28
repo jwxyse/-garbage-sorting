@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+void trashtype(const char* trash){ //trashtype 이란 함수 지정, 이름이 trash인 문자열로 된 포인터 지정
+    int a, y, n;
+    if(strstr(trash, "병") != NULL){ // 만약 쓰레기의 이름에 ""친 부분이 포함되면 프린트문 출력 
+        printf("유리류 입니다");
+    } 
+    else if(strstr(trash, "캔") != NULL){
+        printf("캔류 입니다");
+    }
+    else if(strstr(trash, "껍질") != NULL){
+        printf("딱딱한 껍질일 경우 일반쓰레기, 아닐 경우 음식물 쓰레기 입니다");
+    }
+    else if(strstr(trash, "비닐") != NULL){
+        printf("음실물이 묻어 있습니까?(y or n):");
+        scanf("%s", &a);
+        if(a == y)
+        printf("일반 쓰레기 입니다");
+        else
+        printf("비닐류 입니다");
+    }
+    else if(strstr(trash, "뼈") != NULL){
+        printf("일반쓰레기 입니다");
+    }
+    else if(strstr(trash, "곽") != NULL){
+        printf("종이류 입니다");
+        }
+    else if(strstr(trash, "박스") != NULL){
+        printf("종이류 입니다");
+    }
+    else if(strstr(trash, "뼈") != NULL){
+        printf("일반쓰레기 입니다");
+    }
+}
+
+
+
+
+
+int main() {
+    char trash[100];
+    printf("쓰레기의 이름을 입력하세요: ");
+    scanf("%[^\n]", &trash); // 개행 문자 전까지 읽기
+
+    trashtype(trash); // 쓰레기 분류 함수 호출
+    return 0;
+}
