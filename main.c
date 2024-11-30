@@ -18,7 +18,7 @@ int main() {
     char inputPassword[50];
     char trash[100];
 
-    printf("1. 회원가입\n2. 로그인\n선택하세요 (1 또는 2): ");
+    printf("1. 회원가입\n2. 로그인\n(1 또는 2를 선택해주세요!): ");
     scanf("%d", &choice);
 
     if (choice == 1) {
@@ -33,7 +33,7 @@ int main() {
             printf("%s 님 회원가입이 완료되었습니다!\n", user.username);
             
             // 로그인 기능 호출
-            printf("로그인창으로 이동합니다.\n");
+            printf("로그인창으로 이동합니다\n");
             printf("ID: ");
             scanf("%49s", inputUsername);
             printf("Password: ");
